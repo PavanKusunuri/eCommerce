@@ -7,9 +7,11 @@ const App = () => {
   return (
     <>
       <Header />
-      <Container>
-        <div>Welcome to eCommerce Application</div>
-      </Container>
+      <main className='py-3'>
+        <Container>
+          <div>Welcome to India Mart</div>
+        </Container>
+      </main>
       <Footer />
     </>
   );
