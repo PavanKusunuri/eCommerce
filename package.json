@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "India Mart application built with node and react ",
   "main": "server.js",
+  "type": "module",
   "scripts": {
     "start": "node backend/server",
     "server": "nodemon backend/server",
