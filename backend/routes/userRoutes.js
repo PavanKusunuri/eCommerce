@@ -4,6 +4,8 @@ import {
     authUser
 } from '../controllers/userController.js'
 
-router.route('/login').post(authUser)
+router.post("/login", authUser);
+
+// router.route('/login').post(authUser)
 
 export default router
