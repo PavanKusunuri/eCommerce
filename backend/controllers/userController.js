@@ -7,11 +7,7 @@ import generateToken from '../utils/generateToken.js';
 //  @access    Public
 
 const authUser = asyncHandler(async (req, res) => {
-    console.log("Async Handler is called...")
-    // console.log(req)
     const { email, password } = req.body
-    console.log(email)
-    console.log(password)
     const user = await User.findOne({ email: email })
 
     if (user && (await user.matchPassword(password))) {
