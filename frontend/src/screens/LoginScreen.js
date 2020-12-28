@@ -7,7 +7,7 @@ import Loader from '../components/Loader';
 import { Login } from '../actions/userActions';
 import FormContainer from '../components/FormContainer';
 
-const LoginScreen = ({ location }) => {
+const LoginScreen = ({ location, history }) => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
@@ -29,11 +29,13 @@ const LoginScreen = ({ location }) => {
 
     const submitHandler = (e) => {
         e.preventDefault()
+        dispatch(login(email, password))
     }
 
     return (
         <FormContainer>
             <h1> Sign In</h1>
+            { error && <Message variant='danger'>{error</Message>}
             <Form onSubmit={submitHandler}>
                 <Form.Group controllerId='email'>
                     <Form.Label>Email Address</Form.Label>
