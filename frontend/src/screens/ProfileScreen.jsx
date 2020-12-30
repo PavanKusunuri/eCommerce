@@ -17,7 +17,7 @@ const ProfileScreen = ({ location, history }) => {
 
     const userDetails = useSelector(state => state.userDetails)
     const { loading, error, user } = userDetails;
-
+console.log(user)
     const userLogin = useSelector((state)=> state.userLogin)
     const userUpdateProfile = useSelector((state)=> state.userUpdateProfile)
     const { success } = userUpdateProfile
@@ -27,12 +27,12 @@ const ProfileScreen = ({ location, history }) => {
         if (!userInfo) {
             history.push('/login')
         } else {
-            if(!user.name) {
+            if(!user || !user.name) {
                 dispatch(getUserDetails('profile'))
             } else {
+                console.log(user.name)
                 setName(user.name)
                 setEmail(user.email)
-
             }
         }
     }, [dispatch, userInfo, history, user])
