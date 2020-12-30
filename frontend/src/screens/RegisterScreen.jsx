@@ -44,7 +44,7 @@ const RegisterScreen = ({ location, history }) => {
             { error && <Message variant='danger'>{error}</Message>}
             <Form onSubmit={submitHandler}>
             <Form.Group controllerId='name'>
-                    <Form.Label>Email Address</Form.Label>
+                    <Form.Label>Name</Form.Label>
                     <Form.Control
                         type="name"
                         placeholder="Enter Name"
