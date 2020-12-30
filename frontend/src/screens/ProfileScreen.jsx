@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import Message from '../components/Message';
 import Loader from '../components/Loader';
 import { getUserDetails, updateUserProfile } from '../actions/userActions';
+import { USER_UPDATE_PROFILE_RESET} from '../constants/userConstants';
 
 const ProfileScreen = ({ location, history }) => {
     const [name, setName] = useState('')
@@ -28,6 +29,7 @@ console.log(user)
             history.push('/login')
         } else {
             if(!user || !user.name) {
+                dispatch({ type: USER_UPDATE_PROFILE_RESET })
                 dispatch(getUserDetails('profile'))
             } else {
                 console.log(user.name)

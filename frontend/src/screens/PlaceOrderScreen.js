@@ -124,9 +124,17 @@ const PlaceOrderScreen = ({ history }) => {
                             </ListGroup.Item>
                             <ListGroup.Item>
                                 <Row>
-                                    <Col>Total
+                                    <Col>Tax Price
                                     </Col>
                                     <Col>${cart.taxPrice}
+                                    </Col>
+                                </Row>
+                            </ListGroup.Item>
+                            <ListGroup.Item>
+                                <Row>
+                                    <Col>Total
+                                    </Col>
+                                    <Col>${cart.totalPrice}
                                     </Col>
                                 </Row>
                             </ListGroup.Item>
@@ -134,7 +142,7 @@ const PlaceOrderScreen = ({ history }) => {
                                 {error && <Message variant='danger'>{error}</Message>}
                             </ListGroup.Item>
                             <ListGroup.Item>
-                                <Button disabled={cart.cartItems === 0} onClick={placeOrderHandler} type="button" className="btn btn-block">
+                                <Button disabled={cart.cartItems.length === 0} onClick={placeOrderHandler} type="button" className="btn btn-block">
                                 </Button>
                             </ListGroup.Item>
                         </ListGroup>
