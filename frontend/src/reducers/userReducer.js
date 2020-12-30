@@ -8,7 +8,11 @@ import {
     USER_REGISTER_SUCCESS,
     USER_DETAIL_FAIL,
     USER_DETAIL_SUCCESS,
-    USER_DETAIL_REQUEST
+    USER_DETAIL_REQUEST,
+    USER_UPDATE_PROFILE_FAIL,
+    USER_UPDATE_PROFILE_RESET,
+    USER_UPDATE_PROFILE_SUCCESS,
+    USER_UPDATE_PROFILE_REQUEST
 } from '../constants/userConstants'
 
 export const userLoginReducer = (state = {}, action) => {
