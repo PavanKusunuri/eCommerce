@@ -3,9 +3,9 @@ const router = express.Router()
 
 import {
     addOrderItems
-} from '../controllers/orderController'
+} from '../controllers/orderController.js'
 
-import { protect } from '../middleware/authMiddleware'
+import { protect } from '../middleware/authMiddleware.js'
 
 router.route('/').post(protect, addOrderItems)
 
