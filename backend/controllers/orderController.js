@@ -57,6 +57,7 @@ const getOrderById = asyncHandler(async (req, res) => {
 //  @access private
 
 const updateOrderToPaid = asyncHandler(async (req, res) => {
+    console.log("Contoller method ic ")
     const order = await (await Order.findById(req.params.id))
 
     if (order) {
