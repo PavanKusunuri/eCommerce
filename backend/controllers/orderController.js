@@ -78,4 +78,13 @@ const updateOrderToPaid = asyncHandler(async (req, res) => {
 
 
 
-export { addOrderItems, getOrderById, updateOrderToPaid }
+//  @desc Get logged in user orders
+//  @route /api/orders/myorders
+//  @access private
+
+const getMyOrders = asyncHandler(async (req, res) => {
+    const orders = await (await Order.find(user))
+    res.json(orders)
+})
+
+export { addOrderItems, getOrderById, updateOrderToPaid, getMyOrders }
