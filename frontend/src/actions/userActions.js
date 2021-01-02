@@ -16,7 +16,7 @@ import {
     USER_DETAIL_RESET,
     USER_LIST_FAIL,
     USER_LIST_SUCCESS,
-    USER_LIST_FAIL
+    USER_LIST_REQUEST
 } from "../constants/userConstants"
 import { ORDER_LIST_MY_RESET } from '../constants/orderConstants'
 

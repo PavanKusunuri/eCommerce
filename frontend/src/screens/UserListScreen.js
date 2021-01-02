@@ -6,7 +6,7 @@ import Message from '../components/Message';
 import Loader from '../components/Loader';
 import { listUsers } from '../actions/userActions';
 
-const userListScreen = () => {
+const UserListScreen = () => {
     const dispatch = useDispatch()
 
     const userList = useSelector(state => state.userList)
@@ -14,7 +14,7 @@ const userListScreen = () => {
 
     useEffect(() => {
         dispatch(listUsers())
-    }, [dispatch])
+    }, [])
 
     const deleteHandler = (id) => {
         console.log("delete")
@@ -70,4 +70,4 @@ const userListScreen = () => {
     )
 }
 
-export default userListScreen
+export default UserListScreen

@@ -15,7 +15,6 @@ import { PaymentScreen } from './screens/PaymentScreen';
 import PlaceOrderScreen from './screens/PlaceOrderScreen';
 import OrderScreen from './screens/OrderScreen';
 import UserListScreen from './screens/UserListScreen';
-import User from '../../backend/models/userModel';
 
 
 const App = () => {
