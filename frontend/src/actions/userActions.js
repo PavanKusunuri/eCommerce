@@ -182,14 +182,9 @@ export const listUsers = () => async (dispatch, getState) => {
             type: USER_LIST_SUCCESS,
             payload: data
         })
-        dispatch({
-            type: USER_LIST_FAIL,
-            payload: data
-        })
-        localStorage.setItem('userInfo', JSON.stringify(data))
     } catch (error) {
         dispatch({
-            type: USER_UPDATE_PROFILE_FAIL,
+            type: USER_LIST_FAIL,
             payload: error.response && error.response.data.message ?
                 error.response.data.message : error.response
         })

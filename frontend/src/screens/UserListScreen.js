@@ -11,7 +11,7 @@ const UserListScreen = () => {
 
     const userList = useSelector(state => state.userList)
     const { loading, error, users } = userList
-
+    console.log(users)
     useEffect(() => {
         dispatch(listUsers())
     }, [])
@@ -39,8 +39,8 @@ const UserListScreen = () => {
                         </thead>
                         <tbody>
                             {
-                                users.map(user => (
-                                    <tr key={user._id}>
+                                users.length > 0 && users.map(user => (
+                                    <tr>
                                         <td>{user._id}</td>
                                         <td>{user.name}</td>
                                         <td><a href={`mailto:${user.email}`}>{user.email}</a></td>
