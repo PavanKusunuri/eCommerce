@@ -22,7 +22,8 @@ import {
     USER_DELETE_FAIL,
     USER_DELETE_SUCCESS,
     USER_UPDATE_REQUEST,
-    USER_UPDATE_SUCCESS
+    USER_UPDATE_SUCCESS,
+    USER_UPDATE_FAIL
 } from "../constants/userConstants"
 import { ORDER_LIST_MY_RESET } from '../constants/orderConstants'
 
