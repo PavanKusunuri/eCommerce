@@ -56,7 +56,6 @@ const getOrderById = asyncHandler(async (req, res) => {
 //  @access private
 
 const updateOrderToPaid = asyncHandler(async (req, res) => {
-    console.log("Contoller method ic ")
     const order = await (await Order.findById(req.params.id))
 
     if (order) {
@@ -68,10 +67,13 @@ const updateOrderToPaid = asyncHandler(async (req, res) => {
             update_time: req.body.update_item,
             email_address: req.body.payer.email_address
         }
+
         const updatedOrder = await order.save()
+
         res.json = updatedOrder
     } else {
-        throw new Error('Order not found ..')
+        res.status(404)
+        throw new Error('Order not found')
     }
 })
 
