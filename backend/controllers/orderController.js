@@ -121,5 +121,7 @@ export {
     addOrderItems,
     getOrderById,
     updateOrderToPaid,
-    getMyOrders
+    updateOrderToDelivered,
+    getMyOrders,
+    getOrders,
 }
