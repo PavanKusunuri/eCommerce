@@ -21,7 +21,7 @@ import {
     PRODUCT_TOP_REQUEST,
     PRODUCT_TOP_SUCCESS,
     PRODUCT_TOP_FAIL,
-} from '../constants/productConstants'
+} from '../constants/productsConstants'
 import { logout } from './userActions'
 
 export const listProducts = (keyword = '', pageNumber = '') => async (

@@ -19,7 +19,7 @@ import {
     userListReducer,
     userDeleteReducer,
     userUpdateReducer,
-} from './reducers/userReducers'
+} from './reducers/userReducer'
 import {
     orderCreateReducer,
     orderDetailsReducer,
