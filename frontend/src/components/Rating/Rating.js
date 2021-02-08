@@ -1,11 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-
 const Rating = ({ value, text, color }) => {
     return (
         <div className='rating'>
-
             <span>
                 <i style={{ color }}
                     className={
@@ -62,7 +60,6 @@ const Rating = ({ value, text, color }) => {
                 ></i>
             </span>
             <span> {text && text}</span>
-
         </div>
     )
 }
@@ -77,4 +74,4 @@ Rating.propTypes = {
     color: PropTypes.string
 }
 
-export default Rating
+export default Rating;
